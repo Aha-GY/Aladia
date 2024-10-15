@@ -89,5 +89,5 @@ jobs:
         working-directory: ./nuxt-app
 
       - name: Publish to Chromatic
-        run: npm run chromatic -- --auto-accept-changesz
+        run: npm run chromatic -- --auto-accept-changes
         working-directory: ./nuxt-app

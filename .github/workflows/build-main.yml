@@ -70,3 +70,24 @@ jobs:
           browser: chrome
           start: npm run dev
           working-directory: ./nuxt-app
+
+  run-chromatic:
+    name: Chromatic Visual Regression
+    runs-on: ubuntu-latest
+    needs: run-cypress
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: List contents of nuxt-app directory
+        run: ls -al ./nuxt-app
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./nuxt-app
+
+      - name: Publish to Chromatic
+        run: npm run chromatic -- --auto-accept-changesz
+        working-directory: ./nuxt-app

@@ -11,9 +11,9 @@
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build",
     "cy:open": "cypress open",
-    "chromatic": "npx chromatic  --allow-console-errors --project-token=chpt_0611072ae48672a",
+    "chromatic": "npx chromatic  --allow-console-errors --project-token=chpt_ed63d784d6f3742",
     "start": "nuxt start",
-    "cypress":"cypress open"
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
